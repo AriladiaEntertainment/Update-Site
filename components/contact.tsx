@@ -12,10 +12,39 @@ export function Contact() {
     message: "",
   })
 
+  const [showConfirmation, setShowConfirmation] = useState(false)
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Add your form submission logic here
+
+    const subject = encodeURIComponent(`Project Inquiry: ${formData.projectType || "New Project"}`)
+    const body = encodeURIComponent(
+      `Name/Studio: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Project Type: ${formData.projectType}\n\n` +
+        `Project Details:\n${formData.message}`,
+    )
+
+    const mailtoLink = `mailto:tymar.miles@ariladia.com?subject=${subject}&body=${body}`
+
+    // Open email client
+    window.location.href = mailtoLink
+
+    // Show confirmation
+    setShowConfirmation(true)
+
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      projectType: "",
+      message: "",
+    })
+
+    // Hide confirmation after 5 seconds
+    setTimeout(() => {
+      setShowConfirmation(false)
+    }, 5000)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,7 +56,9 @@ export function Contact() {
 
   return (
     <section id="contact" className="max-w-[1200px] mx-auto px-5 py-14">
-      <h2 className="text-[15px] text-[#d0d0d0] tracking-[0.12em] uppercase font-medium mb-[22px] text-chart-4">Contact</h2>
+      <h2 className="text-[15px] text-[#d0d0d0] tracking-[0.12em] uppercase font-medium mb-[22px] text-chart-4">
+        Contact
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-[26px] items-start">
         <div>
@@ -37,6 +68,17 @@ export function Contact() {
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-2.5 mt-1">
+            {showConfirmation && (
+              <div className="py-3 px-4 rounded-[10px] bg-gradient-to-r from-[#4da45b]/20 to-[#3c7fb8]/20 border border-[#4da45b]/40 text-[11px] text-[#4da45b] animate-in fade-in slide-in-from-top-2 duration-300">
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-medium">Your email client has been opened. Thank you for reaching out!</span>
+                </div>
+              </div>
+            )}
+
             <div>
               <label htmlFor="name" className="text-[10px] text-[#d0d0d0] uppercase tracking-[0.14em]">
                 Name / Studio
