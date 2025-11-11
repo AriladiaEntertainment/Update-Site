@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
+import { FeaturedSeries } from "@/components/featured-series"
 import { Portfolio } from "@/components/portfolio"
 import { Studio } from "@/components/studio"
 import { Credits } from "@/components/credits"
@@ -17,6 +18,7 @@ export default function Home() {
       <main className="pt-[88px]">
         <Hero />
         <About />
+        <FeaturedSeries />
         <Portfolio />
         <Studio />
         <Credits />
