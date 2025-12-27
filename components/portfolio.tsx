@@ -12,7 +12,9 @@ export function Portfolio() {
 
   return (
     <section id="portfolio" className="max-w-[1200px] mx-auto px-5 py-14">
-      <h2 className="text-[15px] text-[#d0d0d0] tracking-[0.12em] uppercase font-medium mb-[22px] text-chart-5">Portfolio</h2>
+      <h2 className="text-[15px] text-[#d0d0d0] tracking-[0.12em] uppercase font-medium mb-[22px] text-chart-5">
+        Portfolio
+      </h2>
       <p className="text-sm text-[#b2b2b2] mb-6">Organised selections across film, trailers, and interactive media.</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -36,7 +38,9 @@ export function Portfolio() {
             />
           </div>
           <div className="p-4">
-            <div className="text-[8px] uppercase tracking-[0.14em] text-[#3c7fb8] mb-1 text-destructive-foreground">Featured Work</div>
+            <div className="text-[8px] uppercase tracking-[0.14em] text-[#3c7fb8] mb-1 text-destructive-foreground">
+              Featured Work
+            </div>
             <div className="text-[11px] text-[#d0d0d0]">Cinematic DAW Playthrough</div>
             <div className="text-[9px] text-[#b2b2b2] mt-1">Hybrid orchestral scoring </div>
           </div>
