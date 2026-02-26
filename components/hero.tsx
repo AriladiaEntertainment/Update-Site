@@ -9,9 +9,9 @@ export function Hero() {
 
   return (
     <section id="home" className="relative">
-      {/* Video / Thumbnail Background */}
-      <div className="relative w-full overflow-hidden" style={{ height: "clamp(520px, 70vh, 720px)" }}>
-        {/* YouTube thumbnail as background */}
+      {/* Full-viewport Hero with Video Background */}
+      <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0 z-0">
           {playing ? (
             <iframe
@@ -26,34 +26,25 @@ export function Hero() {
               src="https://img.youtube.com/vi/EK1UbcNBSJo/maxresdefault.jpg"
               alt="Cindara Teaser thumbnail"
               fill
-              className="object-cover"
+              className="object-cover brightness-[0.4]"
               priority
             />
           )}
         </div>
-        {/* Overlay - hide when video is playing */}
+
+        {/* Hero Content */}
         {!playing && (
-          <div
-            className="absolute inset-0 z-[1]"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(2,3,8,0.5) 0%, rgba(2,3,8,0.25) 40%, rgba(2,3,8,0.65) 80%, rgba(2,3,8,1) 100%)",
-            }}
-          />
-        )}
-        {/* Hero Content - hide when video is playing */}
-        {!playing && (
-          <div className="relative z-[2] flex flex-col items-center justify-center h-full text-center px-5">
-            <h1 className="text-[clamp(32px,6vw,56px)] font-bold tracking-[0.2em] uppercase text-[#f5f5f5] mb-3 text-balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
+          <div className="relative z-[2] flex flex-col items-center justify-center text-center px-5">
+            <h1 className="text-[clamp(36px,7vw,64px)] font-bold tracking-[0.2em] uppercase text-white mb-4 text-balance drop-shadow-[0_2px_16px_rgba(0,0,0,0.8)]">
               TYMAR MILES
             </h1>
-            <p className="text-[clamp(13px,2vw,16px)] tracking-[0.12em] uppercase text-[#d0d0d0] mb-8 drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]">
+            <p className="text-[clamp(13px,2vw,17px)] tracking-[0.12em] uppercase text-white/80 mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]">
               {"IMDb Credited Composer | Creator of CINDARA"}
             </p>
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-5">
               <button
                 onClick={() => setPlaying(true)}
-                className="inline-flex items-center gap-2.5 py-3 px-8 rounded-full text-[12px] tracking-[0.16em] uppercase font-semibold transition-all duration-[0.25s] bg-[#f5f5f5]/10 backdrop-blur-sm text-[#f5f5f5] border border-[#f5f5f5]/20 hover:-translate-y-0.5 hover:bg-[#f5f5f5]/20 hover:shadow-[0_10px_28px_rgba(0,0,0,0.45)]"
+                className="inline-flex items-center gap-2.5 py-3 px-8 rounded-full text-[12px] tracking-[0.16em] uppercase font-semibold transition-all duration-300 bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-[0_10px_28px_rgba(0,0,0,0.45)]"
                 aria-label="Play Cindara Teaser"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -63,18 +54,19 @@ export function Hero() {
               </button>
               <Link
                 href="#contact"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full text-[12px] tracking-[0.16em] uppercase font-semibold transition-all duration-[0.25s] bg-[#3c7fb8] text-[#f5f5f5] hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(60,127,184,0.35)] hover:scale-105"
+                className="inline-flex items-center gap-2 py-3.5 px-9 rounded text-[13px] tracking-[0.1em] uppercase font-bold transition-all duration-300 bg-[#e50914] text-white hover:scale-105 hover:shadow-[0_8px_24px_rgba(229,9,20,0.4)]"
               >
                 Request Custom Demo Cue
               </Link>
             </div>
           </div>
         )}
-        {/* Close button when video is playing */}
+
+        {/* Close button when playing */}
         {playing && (
           <button
             onClick={() => setPlaying(false)}
-            className="absolute top-4 right-4 z-[3] w-10 h-10 rounded-full bg-[#020308]/70 text-[#f5f5f5] flex items-center justify-center hover:bg-[#020308]/90 transition-colors"
+            className="absolute top-4 right-4 z-[3] w-10 h-10 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-black/90 transition-colors"
             aria-label="Close video"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -93,13 +85,13 @@ export function Hero() {
           href="https://m.imdb.com/name/nm18059477/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-opacity hover:opacity-80"
+          className="transition-all duration-300 grayscale brightness-200 hover:grayscale-0"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
             alt="IMDb Profile"
-            className="h-6"
+            className="h-[80px]"
           />
         </a>
       </div>
