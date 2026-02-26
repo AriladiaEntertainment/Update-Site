@@ -104,8 +104,8 @@ export function FeaturedSeries() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/rCS73SE75fo"
-              title="Ariladia Original Series"
+              src="https://www.youtube.com/embed/CE9rZObzeeY"
+              title="IMDb Credited Work"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -122,7 +122,7 @@ export function FeaturedSeries() {
                   color: "#4da45b",
                 }}
               >
-                Original Series
+                IMDb Credit
               </div>
               <div
                 className="px-3 py-1 rounded-full text-[9px] uppercase tracking-[0.14em] border"
@@ -132,41 +132,60 @@ export function FeaturedSeries() {
                   color: "#3c7fb8",
                 }}
               >
-                Exclusive Content
+                Featured Work
               </div>
             </div>
             <h3 className="text-[18px] md:text-[20px] text-[#d0d0d0] uppercase tracking-[0.14em] font-medium mb-3">
-              Ariladia Entertainment Series
+              IMDb Credited Composition
             </h3>
             <p className="text-[13px] text-[#b2b2b2] leading-relaxed mb-4">
-              Experience the creative journey behind cinematic compositions, sound design, and the art of scoring for
-              visual media. This series showcases the process, inspiration, and dedication that goes into every project.
+              Professional credited work showcasing cinematic scoring for film and media. This project represents a milestone in Tymar Miles&apos; career as a credited composer on IMDb.
             </p>
-            <a
-              href="https://youtu.be/rCS73SE75fo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] uppercase tracking-[0.16em] font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_24px_rgba(60,127,184,0.4)]"
-              style={{
-                background: "linear-gradient(90deg, #4da45b, #3c7fb8)",
-                color: "#010101",
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            <div className="flex items-center gap-3 flex-wrap">
+              <a
+                href="https://youtu.be/CE9rZObzeeY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] uppercase tracking-[0.16em] font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_24px_rgba(60,127,184,0.4)]"
+                style={{
+                  background: "linear-gradient(90deg, #4da45b, #3c7fb8)",
+                  color: "#010101",
+                }}
               >
-                <polygon points="5 3 19 12 5 21 5 3" />
-              </svg>
-              Watch Full Series
-            </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                Watch Now
+              </a>
+              <a
+                href="https://m.imdb.com/name/nm18059477/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] uppercase tracking-[0.16em] font-semibold border transition-all duration-300 hover:scale-105 text-[#d0d0d0]"
+                style={{
+                  borderColor: "rgba(255,255,255,0.16)",
+                  background: "rgba(255,255,255,0.04)",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
+                  alt="IMDb"
+                  className="h-3.5"
+                />
+                View on IMDb
+              </a>
+            </div>
           </div>
         </div>
       </div>
