@@ -4,7 +4,6 @@ export function FeaturedSeries() {
       <div className="text-center mb-8">
         <div className="text-[11px] text-[#3c7fb8] uppercase tracking-[0.16em] mb-3">Featured Content</div>
         <h2 className="text-[24px] md:text-[32px] text-[#d0d0d0] tracking-[0.12em] uppercase font-medium mb-4">
-          Featured Collaborations
         </h2>
         <p className="text-sm text-[#b2b2b2] max-w-[600px] mx-auto">
           An exclusive look into original compositions and cinematic storytelling
