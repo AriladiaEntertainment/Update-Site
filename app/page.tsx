@@ -15,7 +15,7 @@ export default function Home() {
       style={{ background: "radial-gradient(circle at top, #151821 0%, #020308 55%, #000 100%)" }}
     >
       <Header />
-      <main className="pt-[88px]">
+      <main className="pt-[72px]">
         <Hero />
         <About />
         <FeaturedSeries />
