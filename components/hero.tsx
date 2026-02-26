@@ -1,47 +1,87 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 
 export function Hero() {
+  const [playing, setPlaying] = useState(false)
+
   return (
     <section id="home" className="relative">
-      {/* Video Background */}
+      {/* Video / Thumbnail Background */}
       <div className="relative w-full overflow-hidden" style={{ height: "clamp(520px, 70vh, 720px)" }}>
+        {/* YouTube thumbnail as background */}
         <div className="absolute inset-0 z-0">
-          <iframe
-            src="https://www.youtube.com/embed/EK1UbcNBSJo?autoplay=1&mute=1&loop=1&playlist=EK1UbcNBSJo&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&iv_load_policy=3"
-            title="Cindara Teaser"
-            allow="autoplay; encrypted-media"
-            className="absolute top-1/2 left-1/2 w-[180%] md:w-[120%] pointer-events-none"
+          {playing ? (
+            <iframe
+              src="https://www.youtube.com/embed/EK1UbcNBSJo?autoplay=1&mute=0&loop=1&playlist=EK1UbcNBSJo&controls=1&modestbranding=1&rel=0&playsinline=1"
+              title="Cindara Teaser"
+              allow="autoplay; encrypted-media; fullscreen"
+              className="w-full h-full"
+              style={{ border: "none" }}
+            />
+          ) : (
+            <Image
+              src="https://img.youtube.com/vi/EK1UbcNBSJo/maxresdefault.jpg"
+              alt="Cindara Teaser thumbnail"
+              fill
+              className="object-cover"
+              priority
+            />
+          )}
+        </div>
+        {/* Overlay - hide when video is playing */}
+        {!playing && (
+          <div
+            className="absolute inset-0 z-[1]"
             style={{
-              aspectRatio: "16/9",
-              transform: "translate(-50%, -50%)",
-              border: "none",
+              background:
+                "linear-gradient(to bottom, rgba(2,3,8,0.5) 0%, rgba(2,3,8,0.25) 40%, rgba(2,3,8,0.65) 80%, rgba(2,3,8,1) 100%)",
             }}
           />
-        </div>
-        {/* Overlay */}
-        <div
-          className="absolute inset-0 z-[1]"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(2,3,8,0.55) 0%, rgba(2,3,8,0.3) 40%, rgba(2,3,8,0.7) 80%, rgba(2,3,8,1) 100%)",
-          }}
-        />
-        {/* Hero Content */}
-        <div className="relative z-[2] flex flex-col items-center justify-center h-full text-center px-5">
-          <h1 className="text-[clamp(32px,6vw,56px)] font-bold tracking-[0.2em] uppercase text-[#f5f5f5] mb-3 text-balance">
-            TYMAR MILES
-          </h1>
-          <p className="text-[clamp(13px,2vw,16px)] tracking-[0.12em] uppercase text-[#d0d0d0] mb-8">
-            {"IMDb Credited Composer | Creator of CINDARA"}
-          </p>
-          <Link
-            href="#contact"
-            className="inline-flex items-center gap-2 py-3 px-8 rounded-full text-[12px] tracking-[0.16em] uppercase font-semibold transition-all duration-[0.25s] bg-[#3c7fb8] text-[#f5f5f5] hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(60,127,184,0.35)] hover:scale-105"
+        )}
+        {/* Hero Content - hide when video is playing */}
+        {!playing && (
+          <div className="relative z-[2] flex flex-col items-center justify-center h-full text-center px-5">
+            <h1 className="text-[clamp(32px,6vw,56px)] font-bold tracking-[0.2em] uppercase text-[#f5f5f5] mb-3 text-balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
+              TYMAR MILES
+            </h1>
+            <p className="text-[clamp(13px,2vw,16px)] tracking-[0.12em] uppercase text-[#d0d0d0] mb-8 drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]">
+              {"IMDb Credited Composer | Creator of CINDARA"}
+            </p>
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-5">
+              <button
+                onClick={() => setPlaying(true)}
+                className="inline-flex items-center gap-2.5 py-3 px-8 rounded-full text-[12px] tracking-[0.16em] uppercase font-semibold transition-all duration-[0.25s] bg-[#f5f5f5]/10 backdrop-blur-sm text-[#f5f5f5] border border-[#f5f5f5]/20 hover:-translate-y-0.5 hover:bg-[#f5f5f5]/20 hover:shadow-[0_10px_28px_rgba(0,0,0,0.45)]"
+                aria-label="Play Cindara Teaser"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Watch Teaser
+              </button>
+              <Link
+                href="#contact"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full text-[12px] tracking-[0.16em] uppercase font-semibold transition-all duration-[0.25s] bg-[#3c7fb8] text-[#f5f5f5] hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(60,127,184,0.35)] hover:scale-105"
+              >
+                Request Custom Demo Cue
+              </Link>
+            </div>
+          </div>
+        )}
+        {/* Close button when video is playing */}
+        {playing && (
+          <button
+            onClick={() => setPlaying(false)}
+            className="absolute top-4 right-4 z-[3] w-10 h-10 rounded-full bg-[#020308]/70 text-[#f5f5f5] flex items-center justify-center hover:bg-[#020308]/90 transition-colors"
+            aria-label="Close video"
           >
-            Request Custom Demo Cue
-          </Link>
-        </div>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
 
       {/* Trust Row */}
