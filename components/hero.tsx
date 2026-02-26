@@ -39,7 +39,7 @@ export function Hero() {
               TYMAR MILES
             </h1>
             <p className="text-[clamp(13px,2vw,17px)] tracking-[0.12em] uppercase text-white/80 mb-10 drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]">
-              {"IMDb Credited Composer | Creator of CINDARA"}
+              {"IMDb Credited Composer"}
             </p>
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-5">
               <button
