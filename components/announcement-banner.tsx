@@ -29,7 +29,7 @@ export function AnnouncementBanner() {
             className="group relative transition-transform duration-300 hover:scale-105"
             title="The Scoring Initiative - Win a custom score for your project"
           >
-            <div className="relative w-48 h-12 sm:h-14">
+            <div className="relative w-44 h-11 sm:h-[50px]">
               <Image
                 src="/scoring-initiative-banner.png"
                 alt="The Scoring Initiative - Enter for $5"
