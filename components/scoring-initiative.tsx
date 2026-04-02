@@ -17,19 +17,25 @@ export function ScoringInitiative() {
             {/* Content */}
             <div className="p-8 md:p-10 flex flex-col justify-center">
               <div className="text-[11px] text-[#3c7fb8] tracking-[0.16em] uppercase mb-3 font-semibold">
-                New Initiative
+                About the Initiative
               </div>
-              <h2 className="text-[clamp(22px,3vw,32px)] font-bold tracking-[0.12em] uppercase text-[#f5f5f5] mb-4 text-balance">
+              <h2 className="text-[clamp(22px,3vw,32px)] font-bold tracking-[0.12em] uppercase text-[#f5f5f5] mb-6 text-balance">
                 The Scoring Initiative
               </h2>
-              <p className="text-[13px] text-[#b2b2b2] leading-relaxed max-w-[480px] mb-3">
-                A dedicated hub for composers, filmmakers, and creators looking to explore the art and craft of
-                cinematic scoring. Resources, cues, and insights curated by Tymar Miles.
+              
+              <h3 className="text-[14px] font-semibold tracking-[0.08em] uppercase text-[#f5f5f5] mb-3">
+                The Opportunity
+              </h3>
+              <p className="text-[13px] text-[#b2b2b2] leading-relaxed max-w-[520px] mb-4">
+                I&apos;m looking for the next five stories to bring to life.
               </p>
-              <p className="text-[12px] text-[#b2b2b2] leading-relaxed max-w-[480px] mb-8">
-                Whether you&apos;re a director seeking the right sound or a composer developing your voice — The
-                Scoring Initiative is built for you.
+              <p className="text-[13px] text-[#b2b2b2] leading-relaxed max-w-[520px] mb-4">
+                This initiative is a random lottery designed to support independent creators. For a $5 entry, you stand to receive a custom, high-fidelity score tailored specifically to your visual narrative.
               </p>
+              <p className="text-[13px] text-[#b2b2b2] leading-relaxed max-w-[520px] mb-8">
+                Five winners will be selected to have their project scored by Ariladia Entertainment, bringing the cinematic weight of professional production to your indie film, trailer, or media project.
+              </p>
+              
               <div>
                 <a
                   href="https://ariladia.store"
@@ -37,7 +43,7 @@ export function ScoringInitiative() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 bg-[#f5f5f5] text-[#020308] px-7 py-3.5 rounded-md text-[12px] tracking-[0.12em] uppercase font-bold hover:bg-white transition-all duration-[0.25s] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(245,245,245,0.15)]"
                 >
-                  Enter The Scoring Initiative
+                  Enter the Lottery — $5
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -73,7 +79,7 @@ export function ScoringInitiative() {
                     />
                   </svg>
                 </div>
-                <div className="text-[10px] tracking-[0.14em] uppercase text-[#b2b2b2]">ariladia.store</div>
+                <div className="text-[10px] tracking-[0.14em] uppercase text-[#b2b2b2]">5 Winners</div>
               </div>
             </div>
           </div>
