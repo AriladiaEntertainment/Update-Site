@@ -1,3 +1,4 @@
+import { AnnouncementBanner } from "@/components/announcement-banner"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -7,6 +8,7 @@ import { Studio } from "@/components/studio"
 import { Credits } from "@/components/credits"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { ScoringInitiative } from "@/components/scoring-initiative"
 
 export default function Home() {
   return (
@@ -16,12 +18,14 @@ export default function Home() {
     >
       <Header />
       <main className="pt-[72px]">
+        <AnnouncementBanner />
         <Hero />
         <About />
         <FeaturedSeries />
         <Portfolio />
         <Studio />
         <Credits />
+        <ScoringInitiative />
         <Contact />
       </main>
       <Footer />
