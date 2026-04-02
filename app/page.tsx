@@ -1,3 +1,4 @@
+import { AnnouncementBanner } from "@/components/announcement-banner"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
@@ -15,6 +16,7 @@ export default function Home() {
       className="min-h-screen"
       style={{ background: "radial-gradient(circle at top, #151821 0%, #020308 55%, #000 100%)" }}
     >
+      <AnnouncementBanner />
       <Header />
       <main className="pt-[72px]">
         <Hero />
