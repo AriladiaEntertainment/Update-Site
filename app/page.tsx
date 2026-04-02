@@ -16,9 +16,9 @@ export default function Home() {
       className="min-h-screen"
       style={{ background: "radial-gradient(circle at top, #151821 0%, #020308 55%, #000 100%)" }}
     >
-      <AnnouncementBanner />
       <Header />
       <main className="pt-[72px]">
+        <AnnouncementBanner />
         <Hero />
         <About />
         <FeaturedSeries />
