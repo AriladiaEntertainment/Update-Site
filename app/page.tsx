@@ -7,6 +7,7 @@ import { Studio } from "@/components/studio"
 import { Credits } from "@/components/credits"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { ScoringInitiative } from "@/components/scoring-initiative"
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Portfolio />
         <Studio />
         <Credits />
+        <ScoringInitiative />
         <Contact />
       </main>
       <Footer />
