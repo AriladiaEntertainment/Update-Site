@@ -38,8 +38,8 @@ export function AnnouncementBanner() {
                 priority
               />
             </div>
-            <span className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.12em] uppercase font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity"
-              style={{ color: "#4da45b" }}
+            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-[10px] tracking-[0.12em] uppercase font-bold px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              style={{ color: "#000", backgroundColor: "#4da45b", boxShadow: "0 0 15px rgba(77,164,91,0.6)" }}
             >
               Enter for $5
             </span>
