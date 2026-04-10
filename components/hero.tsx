@@ -15,8 +15,8 @@ export function Hero() {
         <div className="absolute inset-0 z-0">
           {playing ? (
             <iframe
-              src="https://www.youtube.com/embed/EK1UbcNBSJo?autoplay=1&mute=0&loop=1&playlist=EK1UbcNBSJo&controls=1&modestbranding=1&rel=0&playsinline=1"
-              title="Cindara Teaser"
+              src="https://youtu.be/6nko1WBKVC4?si=T_58yfKfE9B67dcJ"
+              title="Reforcement Theme"
               allow="autoplay; encrypted-media; fullscreen"
               className="w-full h-full"
               style={{ border: "none" }}
