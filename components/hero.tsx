@@ -15,16 +15,16 @@ export function Hero() {
         <div className="absolute inset-0 z-0">
           {playing ? (
             <iframe
-              src="https://www.youtube.com/embed/EK1UbcNBSJo?autoplay=1&mute=0&loop=1&playlist=EK1UbcNBSJo&controls=1&modestbranding=1&rel=0&playsinline=1"
-              title="Cindara Teaser"
+              src="https://www.youtube.com/embed/6nko1WBKVC4?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&playsinline=1"
+              title="The Scoring Initiative Teaser"
               allow="autoplay; encrypted-media; fullscreen"
               className="w-full h-full"
               style={{ border: "none" }}
             />
           ) : (
             <Image
-              src="https://img.youtube.com/vi/EK1UbcNBSJo/maxresdefault.jpg"
-              alt="Cindara Teaser thumbnail"
+              src="https://img.youtube.com/vi/6nko1WBKVC4/maxresdefault.jpg"
+              alt="The Scoring Initiative Teaser thumbnail"
               fill
               className="object-cover brightness-[0.4]"
               priority
@@ -45,7 +45,7 @@ export function Hero() {
               <button
                 onClick={() => setPlaying(true)}
                 className="inline-flex items-center gap-2.5 py-3 px-8 rounded-full text-[12px] tracking-[0.16em] uppercase font-semibold transition-all duration-300 bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-[0_10px_28px_rgba(0,0,0,0.45)]"
-                aria-label="Play Cindara Teaser"
+                aria-label="Play The Scoring Initiative Teaser"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
