@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 
 export function AnnouncementBanner() {
   return (
@@ -24,26 +23,31 @@ export function AnnouncementBanner() {
             Now Open:
           </span>
 
-          <Link
-            href="#scoring-initiative"
+          <a
+            href="https://youtu.be/6nko1WBKVC4?si=T_58yfKfE9B67dcJ"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative transition-transform duration-300 hover:scale-105"
-            title="The Scoring Initiative - Win a custom score for your project"
+            title="The Scoring Initiative Teaser - Watch the video"
           >
-            <div className="relative w-44 h-11 sm:h-[50px]">
-              <Image
-                src="/scoring-initiative-banner.png"
-                alt="The Scoring Initiative - Enter for $5"
-                fill
-                className="object-contain"
-                priority
-              />
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg border"
+              style={{ borderColor: "rgba(77,164,91,0.4)", backgroundColor: "rgba(77,164,91,0.08)" }}
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" style={{ color: "#4da45b" }}>
+                <path d="M19.615 3.175c-3.674-3.673-9.63-3.673-13.304 0-3.674 3.674-3.674 9.63 0 13.304 3.673 3.673 9.63 3.673 13.304 0 3.674-3.674 3.674-9.63 0-13.304zm-6.107 10.945v-5.25l4.524 2.625-4.524 2.625z"/>
+              </svg>
+              <span className="text-[10px] tracking-[0.12em] uppercase font-bold"
+                style={{ color: "#4da45b" }}
+              >
+                Watch Teaser
+              </span>
             </div>
             <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-[10px] tracking-[0.12em] uppercase font-bold px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
               style={{ color: "#000", backgroundColor: "#4da45b", boxShadow: "0 0 15px rgba(77,164,91,0.6)" }}
             >
               Enter for $5
             </span>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
